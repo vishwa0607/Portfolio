@@ -32,10 +32,14 @@ class _HomeState extends State<Home> {
                 radius: 80.0,
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
             Container(
+                width: 400,
                 padding: EdgeInsets.all(20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 60.0),
                     Container(
@@ -138,18 +142,20 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     SizedBox(height: 20.0),
-                    RaisedButton.icon(
-                      padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => EducationDetails()),
-                        );
-                      },
-                      icon: Icon(Icons.school),
-                      color: Colors.amber[400],
-                      label: Text('EDUCATION DETAILS'),
+                    Center(
+                      child: RaisedButton.icon(
+                        padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => EducationDetails()),
+                          );
+                        },
+                        icon: Icon(Icons.school),
+                        color: Colors.amber[400],
+                        label: Text('EDUCATION DETAILS'),
+                      ),
                     ),
                   ],
                 )),
